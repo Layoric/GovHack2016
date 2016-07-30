@@ -53,12 +53,15 @@ namespace LASTesting.Tests
                 header.FileSig = new string(reader.ReadChars(4));
                 header.SourceId = reader.ReadUInt16();
                 header.GlobalEncoding = reader.ReadUInt16();
-                //header.ProjectGuid1 = reader.ReadUInt32();
-                //header.ProjectGuid2 = reader.ReadUInt16();
-                //header.ProjectGuid3 = reader.ReadUInt16();
-                //header.ProjectGuid4 = new string(reader.ReadChars(8));
+                header.ProjectGuid1 = reader.ReadInt64();
+                header.ProjectGuid2 = reader.ReadUInt16();
+                header.ProjectGuid3 = reader.ReadUInt16();
+                header.ProjectGuid4 = new string(reader.ReadChars(8));
                 header.MarjorVersion = reader.ReadChar();
                 header.MinorVersion = reader.ReadChar();
+                header.SystemId = new string(reader.ReadChars(32));
+                header.GeneratingSoftware = new string(reader.ReadChars(32));
+                
             }
         }
     }

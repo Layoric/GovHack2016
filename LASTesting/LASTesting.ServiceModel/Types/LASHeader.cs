@@ -11,7 +11,7 @@ namespace LASTesting.ServiceModel.Types
         public string FileSig { get; set; }
         public ushort SourceId { get; set; }
         public ushort GlobalEncoding { get; set; }
-        public ulong ProjectGuid1 { get; set; }
+        public Int64 ProjectGuid1 { get; set; }
         public ushort ProjectGuid2 { get; set; }
         public ushort ProjectGuid3 { get; set; }
         public string ProjectGuid4 { get; set; }
