@@ -19,11 +19,11 @@ namespace LASTesting.ServiceModel.Types
         public char MinorVersion { get; set; }
         public string SystemId { get; set; }
         public string GeneratingSoftware { get; set; }
-        public ushort FileCreationDay { get; set; }
-        public ushort FileCreationYear { get; set; }
-        public ushort HeaderSize { get; set; }
-        public ulong PointDataOffset { get; set; }
-        public ulong NumberOfVariableRecords { get; set; }
+        public int FileCreationDay { get; set; }
+        public int FileCreationYear { get; set; }
+        public int HeaderSize { get; set; }
+        public long PointDataOffset { get; set; }
+        public long NumberOfVariableRecords { get; set; }
         public char PointDataFormat { get; set; }
         public ushort PointDataLength { get; set; }
 
@@ -47,6 +47,6 @@ namespace LASTesting.ServiceModel.Types
         public ulong StartExtendedVariableLength { get; set; }
         public ulong NumberExtendedVariableLength { get; set; }
         public long NumberOfPointRecords { get; set; }
-        public ulong[] NumberOfPointsReturned { get; set; }
+        public long[] NumberOfPointsReturned { get; set; }
     }
 }

@@ -53,7 +53,7 @@ namespace LASTesting.Tests
                 header.FileSig = new string(reader.ReadChars(4));
                 header.SourceId = reader.ReadUInt16();
                 header.GlobalEncoding = reader.ReadUInt16();
-                header.ProjectGuid1 = reader.ReadInt64();
+                header.ProjectGuid1 = reader.ReadUInt32();
                 header.ProjectGuid2 = reader.ReadUInt16();
                 header.ProjectGuid3 = reader.ReadUInt16();
                 header.ProjectGuid4 = new string(reader.ReadChars(8));
@@ -61,7 +61,34 @@ namespace LASTesting.Tests
                 header.MinorVersion = reader.ReadChar();
                 header.SystemId = new string(reader.ReadChars(32));
                 header.GeneratingSoftware = new string(reader.ReadChars(32));
-                
+                header.FileCreationDay = reader.ReadInt16();
+                header.FileCreationYear = reader.ReadInt16();
+                header.HeaderSize = reader.ReadInt16();
+                header.PointDataOffset = reader.ReadInt64();
+                header.NumberOfVariableRecords = reader.ReadInt64();
+                header.PointDataFormat = reader.ReadChar();
+                header.NumberOfPointRecords = reader.ReadInt64();
+                header.NumberOfPointsReturned = new []
+                {
+                    reader.ReadInt64(), reader.ReadInt64(),
+                    reader.ReadInt64(), reader.ReadInt64(),
+                    reader.ReadInt64()
+                };
+                header.XScaleFactor = reader.ReadDouble();
+                header.YScaleFactor = reader.ReadDouble();
+                header.ZScaleFactor = reader.ReadDouble();
+                header.XOffset = reader.ReadDouble();
+                header.YOffset = reader.ReadDouble();
+                header.ZOffset = reader.ReadDouble();
+                header.MaxX = reader.ReadDouble();
+                header.MaxY = reader.ReadDouble();
+                header.MaxZ = reader.ReadDouble();
+
+                header.MinX = reader.ReadDouble();
+                header.MinY = reader.ReadDouble();
+                header.MinZ = reader.ReadDouble();
+
+
             }
         }
     }
