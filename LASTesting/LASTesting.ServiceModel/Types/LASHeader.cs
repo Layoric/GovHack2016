@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace LASTesting.ServiceModel.Types
 {
-    public struct LASHeader
+    public class LASHeader
     {
         public string FileSig { get; set; }
         public ushort SourceId { get; set; }
@@ -36,7 +36,17 @@ namespace LASTesting.ServiceModel.Types
         public double XOffset { get; set; }
         public double YOffset { get; set; }
         public double ZOffset { get; set; }
+        public double MaxX { get; set; }
+        public double MinX { get; set; }
+        public double MaxY { get; set; }
+        public double MinY { get; set; }
+        public double MaxZ { get; set; }
+        public double MinZ { get; set; }
 
-
+        public ulong StartWaveFormPacketRecord { get; set; }
+        public ulong StartExtendedVariableLength { get; set; }
+        public ulong NumberExtendedVariableLength { get; set; }
+        public long NumberOfPointRecords { get; set; }
+        public ulong[] NumberOfPointsReturned { get; set; }
     }
 }

@@ -39,5 +39,11 @@ namespace LASTesting.Tests
 
             Assert.That(response.Result, Is.EqualTo("Hello, World!"));
         }
+
+        [Test]
+        public void TryLoadLasFileHeader()
+        {
+
+        }
     }
 }
