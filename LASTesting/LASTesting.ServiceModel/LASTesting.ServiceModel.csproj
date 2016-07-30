@@ -47,6 +47,7 @@
     <Compile Include="Hello.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Types\LASHeader.cs" />
+    <Compile Include="Types\VariableLengthHeader.cs" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
